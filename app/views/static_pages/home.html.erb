@@ -1,16 +1,102 @@
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<style type="text/css" media="screen">
+    #editor1 {
+		border: 1px solid lightgray;
+		margin: auto;
+		height: 200px;
+		width: 100%;
+		top: 50px;
+	}
+	    #editor2 {
+		border: 1px solid lightgray;
+		margin: auto;
+		height: 200px;
+		width: 100%;
+		top: 100px;
+	}
+	.scrollmargin {
+		height: 80px;
+    text-align: center;
+	}
+</style>
 
-  <h2>
-    This is the home page for the
-    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+<div id="editor1">
+/**
+Live Autocompletion is off
+**/
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
-            
-<%#= image_tag("kitten.jpg", alt: "Kitten") %>
+<div id="editor2">
+/**
+Live Autocompletion is on
+**/
+</div>
+
+
+
+<script>
+    ace.config.set('basePath', 'path')
+    var langTools = ace.require("ace/ext/language_tools");
+    console.log(langTools);
+    langTools.setCompleters([langTools.snippetCompleter, langTools.textCompleter]);
+
+    ace.edit("editor1", {
+        theme: "ace/theme/tomorrow_night_eighties",
+        mode: "ace/mode/javascript",
+        maxLines: 30,
+        minLines: 8,
+        wrap: true,
+        autoScrollEditorIntoView: true,
+        selectionStyle: "line",
+        highlightActiveLine: true,
+        vScrollBarAlwaysVisible: true,
+        vScrollBarAlwaysVisible: true,
+        enableSnippets: true,
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: false,
+        tabSize: 2
+        /*highlightSelectedWord: true|false
+        readOnly: true|false
+        cursorStyle: "ace"|"slim"|"smooth"|"wide"
+        mergeUndoDeltas: false|true|"always"
+        behavioursEnabled: boolean
+        wrapBehavioursEnabled: boolean
+        // this is needed if editor is inside scrollable page
+        autoScrollEditorIntoView: boolean (defaults to false)
+        // copy/cut the full line if selection is empty, defaults to false
+        copyWithEmptySelection: boolean 
+        useSoftTabs: boolean (defaults to false)
+        navigateWithinSoftTabs: boolean (defaults to false)
+        enableMultiselect: boolean   # on by default*/
+    });
+
+    ace.edit("editor2", {
+        theme: "ace/theme/tomorrow_night",
+        mode: "ace/mode/javascript",
+        maxLines: 30,
+        minLines: 8,
+        wrap: true,
+        autoScrollEditorIntoView: true,
+        selectionStyle: "line",
+        highlightActiveLine: true,
+        vScrollBarAlwaysVisible: true,
+        vScrollBarAlwaysVisible: true,
+        enableSnippets: true,
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true,
+        tabSize: 2
+        /*highlightSelectedWord: true|false
+        readOnly: true|false
+        cursorStyle: "ace"|"slim"|"smooth"|"wide"
+        mergeUndoDeltas: false|true|"always"
+        behavioursEnabled: boolean
+        wrapBehavioursEnabled: boolean
+        // this is needed if editor is inside scrollable page
+        autoScrollEditorIntoView: boolean (defaults to false)
+        // copy/cut the full line if selection is empty, defaults to false
+        copyWithEmptySelection: boolean 
+        useSoftTabs: boolean (defaults to false)
+        navigateWithinSoftTabs: boolean (defaults to false)
+        enableMultiselect: boolean   # on by default*/
+    });
+
+</script>
