@@ -4,31 +4,31 @@ ace.define("ace/snippets/javascript",["require","exports","module"], function(re
 exports.snippetText = "\
 # Tokens\n\
 # Inputs\n\
-snippet input\n\
+snippet {input}\n\
 	{type: 'input', idx: ${1:idx}}\n\
-snippet dropdown\n\
+snippet {dropdown}\n\
 	{type: 'dropdown', idx: ${1:idx}, options: [${2}], displayStatic: false}\n\
-snippet fractionInput\n\
+snippet {fractionInput}\n\
 	{type: 'fractionInput', idx: ${1:idx}}\n\
-snippet specificFractionInput\n\
+snippet {specificFractionInput}\n\
 	{type: 'specificFractionInput', idx: ${1:idx}}\n\
-snippet mixedFractionInput\n\
+snippet {mixedFractionInput}\n\
 	{type: 'mixedFractionInput', idx: ${1:idx}}\n\
-snippet specificMixedFractionInput\n\
+snippet {specificMixedFractionInput}\n\
 	{type: 'specificMixedFractionInput', idx: ${1:idx}}\n\
-snippet inputSelector\n\
+snippet {inputSelector}\n\
 	{type: 'inputSelector', idx: ${1:idx}}\n\
-snippet tileSlot\n\
+snippet {tileSlot}\n\
 	{type: 'tileSlot', idx: ${1:idx}}\n\
 # Tables\n\
-snippet msTable\n\
+snippet {msTable}\n\
 	{\n\
 		type: 'msTable',\n\
 		rows: [\n\
 			[${1}]\n\
 		],\n\
 	}\n\
-snippet msTableWithArrows\n\
+snippet {msTableWithArrows}\n\
 	{\n\
 		type: 'msTable',\n\
 		rows: [\n\
@@ -40,21 +40,21 @@ snippet msTableWithArrows\n\
 		rightArrowLabels: [ [] ]\n\
 	}\n\
 # Hints\n\
-snippet hintPopup\n\
+snippet {hintPopup}\n\
 	{\n\
 		type: 'hintPopup',\n\
 		value: ['${1}'],\n\
 		position: '${2:top}'\n\
 	}\n\
 # Fractions\n\
-snippet fraction\n\
+snippet {fraction}\n\
 	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}}\n\
-snippet fractionSmall\n\
+snippet {fractionSmall}\n\
 	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}, cssClass: 'small'}\n\
-snippet div\n\
+snippet {div}\n\
 	{type: 'div', cssClass: '${1}', inner: ['${2}']}\n\
 # Other\n\
-snippet br\n\
+snippet {br}\n\
 	{type: 'br'}\n\
 #\n\
 # Code Snippets\n\
