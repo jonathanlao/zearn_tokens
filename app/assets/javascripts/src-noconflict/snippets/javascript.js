@@ -1,8 +1,7 @@
 ace.define("ace/snippets/javascript",["require","exports","module"], function(require, exports, module) {
 "use strict";
 
-exports.snippetText = "\
-# Tokens\n\
+exports.snippetText = "# Tokens\n\
 # Inputs\n\
 snippet {input}\n\
 	{type: 'input', idx: ${1:idx}}\n\
@@ -51,12 +50,43 @@ snippet {fraction}\n\
 	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}}\n\
 snippet {fractionSmall}\n\
 	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}, cssClass: 'small'}\n\
+snippet {fractionTrailer}\n\
+	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}, trailer: ''}\n\
+snippet {reducedFraction}\n\
+	{type: 'reducedFraction', reduced: [${1}], text: '${2}', inputLocation: '${3:top-left}'}\n\
 snippet {div}\n\
 	{type: 'div', cssClass: '${1}', inner: ['${2}']}\n\
 # Other\n\
 snippet {br}\n\
 	{type: 'br'}\n\
-#\n\
+snippet {image}\n\
+	{type: 'image', value: '${1}', altText: '${2}'}\n\
+snippet {listItem}\n\
+	{type: 'listItem', bulletLabel: '${1:•}', bulletText: '${2}'}\n\
+# Helpers\n\
+snippet TextHelper.metricUnitsToWords()\n\
+	TextHelper.metricUnitsToWords(${1:10}, ${2:'cm'}, ${3:true})\n\
+snippet TextHelper.capitalize()\n\
+	TextHelper.capitalize(${1})\n\
+snippet TextHelper.numToWords()\n\
+	TextHelper.numToWords(${1})\n\
+snippet TextHelper.numToFractionName()\n\
+	TextHelper.numToFractionName(${1})\n\
+snippet TextHelper.addCommas()\n\
+	TextHelper.addCommas(${1})\n\
+snippet TextHelper.pluralize()\n\
+	TextHelper.pluralize(${1:'mouse'}, ${2:3})\n\
+snippet TextHelper.tokensToString()\n\
+	TextHelper.tokensToString([${1}])\n\
+snippet TextHelper.expandedForm()\n\
+	TextHelper.expandedForm(${1:12.34})\n\
+snippet TextHelper.expandedFormMult()\n\
+	TextHelper.expandedFormMult(${1:12.34})\n\
+snippet TextHelper.expandedFormFrac()\n\
+	TextHelper.expandedFormFrac(${1:12.34})\n\
+# MathHelpers\n\
+snippet MathHelper.digitsToNumber()\n\
+	MathHelper.digitsToNumber(${1:[7,2,4,5]}, ${2: 2})\n\
 # Code Snippets\n\
 snippet if\n\
 	if (${1:true}) {\n\
