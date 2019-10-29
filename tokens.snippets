@@ -1,0 +1,101 @@
+# Tokens
+# Inputs
+snippet {input}
+	{type: 'input', idx: ${1:idx}}
+snippet {dropdown}
+	{type: 'dropdown', idx: ${1:idx}, options: [${2}], displayStatic: false}
+snippet {fractionInput}
+	{type: 'fractionInput', idx: ${1:idx}}
+snippet {specificFractionInput}
+	{type: 'specificFractionInput', idx: ${1:idx}}
+snippet {mixedFractionInput}
+	{type: 'mixedFractionInput', idx: ${1:idx}}
+snippet {specificMixedFractionInput}
+	{type: 'specificMixedFractionInput', idx: ${1:idx}}
+snippet {inputSelector}
+	{type: 'inputSelector', idx: ${1:idx}}
+snippet {tileSlot}
+	{type: 'tileSlot', idx: ${1:idx}}
+# Tables
+snippet {msTable}
+	{\n\
+		type: 'msTable',
+		rows: [
+			[${1}]
+		],
+	}\n\
+snippet {msTableWithArrows}
+	{\n\
+		type: 'msTable',
+		rows: [
+			[${1}]
+		],
+		leftArrows: [ [] ],
+		leftArrowLabels: [ [] ],
+		rightArrows: [ [] ],
+		rightArrowLabels: [ [] ]
+	}\n\
+# Hints
+snippet {hintPopup}
+	{\n\
+		type: 'hintPopup',
+		value: ['${1}'],
+		position: '${2:top}'
+	}\n\
+# Fractions
+snippet {fraction}
+	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}}
+snippet {fractionSmall}
+	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}, cssClass: 'small'}
+snippet {fractionTrailer}
+	{type: 'fraction', numerator: ${1:1}, denominator: ${2:2}, trailer: ''}
+snippet {reducedFraction}
+	{type: 'reducedFraction', reduced: [${1}], text: '${2}', inputLocation: '${3:top-left}'}
+snippet {div}
+	{type: 'div', cssClass: '${1}', inner: ['${2}']}
+# Other
+snippet {br}
+	{type: 'br'}
+snippet {image}
+	{type: 'image', value: '${1}', altText: '${2}'}
+snippet {listItem}
+	{type: 'listItem', bulletLabel: '${1:•}', bulletText: '${2}'}
+# Helpers
+snippet TextHelper.metricUnitsToWords()
+	TextHelper.metricUnitsToWords(${1:10}, ${2:'cm'}, ${3:true})
+snippet TextHelper.capitalize()
+	TextHelper.capitalize(${1})
+snippet TextHelper.numToWords()
+	TextHelper.numToWords(${1})
+snippet TextHelper.numToFractionName()
+	TextHelper.numToFractionName(${1})
+snippet TextHelper.addCommas()
+	TextHelper.addCommas(${1})
+snippet TextHelper.pluralize()
+	TextHelper.pluralize(${1:'mouse'}, ${2:3})
+snippet TextHelper.tokensToString()
+	TextHelper.tokensToString([${1}])
+snippet TextHelper.expandedForm()
+	TextHelper.expandedForm(${1:12.34})
+snippet TextHelper.expandedFormMult()
+	TextHelper.expandedFormMult(${1:12.34})
+snippet TextHelper.expandedFormFrac()
+	TextHelper.expandedFormFrac(${1:12.34})
+# MathHelpers
+snippet MathHelper.digitsToNumber()
+	MathHelper.digitsToNumber(${1:[7,2,4,5]}, ${2: 2})
+# Code Snippets
+snippet if
+	if (${1:true}) {
+		${0}
+	}\n\
+snippet ifelse
+	if (${1:true}) {
+		${2}
+	} else {
+		${0}
+	}\n\
+snippet for
+	for (let ${1:i} = 0; $1 < ${2:Things}.length; $1++) {
+		${3:$2[$1]}$0
+	}
