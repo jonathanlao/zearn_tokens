@@ -1,9 +1,15 @@
-# Ruby on Rails Tutorial sample application
+# Autocomplete with the ace editor
 
-This is the sample application for
+## Goals
+
+This project has two goals.
+
+1. Build my first ruby on rails app by following
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
+
+2. Prototype the [ace](https://ace.c9.io/) editor's autocomplete capabilities.
 
 ## License
 
@@ -36,6 +42,3 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book)
